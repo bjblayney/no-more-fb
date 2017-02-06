@@ -1,0 +1,22 @@
+
+{
+    "manifest_version": 2,
+
+    "name": "No More Facebook",
+    "description": "This extension prompts you get off of the book.",
+    "version": "1.1",
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.facebook.com/*"],
+            "css": ["main.css"],
+            "js": ["jquery-1.11.2.min.js", "no-fb.js"]
+        }
+    ]
+}
